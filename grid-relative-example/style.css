@@ -1,0 +1,37 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /** 1fr = 1 fraction, varje kolumn ska vara lika stor */
+    grid-template-rows: repeat(4, 120px);
+    gap: 1rem; /** 1rem = 16px */
+}
+
+header, aside, main {
+    background-color: #93f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    /** auto = följ CSS - flödet alltså, utgå från där element ligger nu
+    och spänn över 6 kolumner */
+    grid-column: auto / span 6;
+}
+
+aside {
+    grid-column: auto / span 2;
+    grid-row: auto / span 3;
+}
+
+main {
+    grid-column: auto / span 4;
+    grid-row: auto / span 3;
+}
