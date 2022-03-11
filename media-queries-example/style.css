@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.wrapper {
+    background-color: #FAF5EB;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #692D55;
+}
+
+.subtitle {
+    display: none;
+}
+
+/** CSS-reglerna i denna media query appliceras bara om webbläsarfönstret
+är mindre än 600px i bredd */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        background-color: #000000;
+    }
+
+    .title {
+        color: #dcdcdc;
+        border: 2px solid #dcdcdc;
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .subtitle {
+        display: block;
+    }
+}

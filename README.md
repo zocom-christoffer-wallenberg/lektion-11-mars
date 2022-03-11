@@ -14,6 +14,4 @@ https://learncssgrid.com/
 
 https://cssgridgarden.com/#sv
 
-
-
 ## Videor

@@ -1,0 +1,49 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /** 1fr = 1 fraction, varje kolumn ska vara lika stor */
+    grid-auto-rows: auto; /** Auto används för att få raderna att växa efter innehåll */
+    gap: 1rem; /** 1rem = 16px */
+    grid-template-areas:
+    ". header header header header ."
+    "aside aside main main main main";
+    /** punkten (.) används när man inte vill populera en kolumn */
+}
+
+header, aside, main {
+    background-color: #93f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main";
+    }
+}
